@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:moneymap/db/category/category_db.dart';
-import 'package:moneymap/models/category_model/category_model.dart';
 import 'package:moneymap/screens/category/category_add_popup.dart';
 import 'package:moneymap/screens/category/screen_categoery.dart';
+import 'package:moneymap/screens/transactions/screen_add_transacions.dart';
 import 'package:moneymap/screens/transactions/screen_transactions.dart';
 import 'package:moneymap/widgets/bottom_nav_bar.dart';
 
@@ -33,6 +32,7 @@ class screenHome extends StatelessWidget {
         onPressed: () {
           if (selecteIndexNotifier.value == 0) {
             print('add transactions');
+            Navigator.of(context).pushNamed(ScreenAddTransactions.routname);
           } else {
             print('add category');
             showCategoryAddPopUp(context);
